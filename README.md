@@ -298,7 +298,9 @@ Add:
 127.0.0.1 web.local
 Mac/Linux:
 Shell
+````text
 sudo nano /etc/hosts
+````
 Add:
 127.0.0.1 web.local
 ________________________________________
@@ -310,23 +312,27 @@ ________________________________________
 Debugging If It Doesn’t Work
 Check ingress:
 Shell
+````text
 kubectl get ingress
- 
+```` 
 Describe it:
 Shell
+````text
 kubectl describe ingress web-ingress
- 
+```` 
 ________________________________________
 Check controller logs:
 Shell
+````text
 kubectl logs -n ingress-nginx deploy/ingress-nginx-controller
- 
+```` 
 Actual output is larger.
 ________________________________________
 ### Verify port mapping:
 Shell
+````text
 docker ps
- 
+```` 
 Make sure ports 80/443 are mapped.
 ________________________________________
 ### Common Issues
