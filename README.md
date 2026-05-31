@@ -198,8 +198,8 @@ Create the cluster:
 Shell
 kind create cluster --name dev-cluster --config kind-3node.yaml
 This allows:
-•	localhost:80 → ingress controller
-•	localhost:443 → ingress controller
+-	localhost:80 → ingress controller
+-	localhost:443 → ingress controller
  
 ________________________________________
 ## Step 9 — Install NGINX Ingress Controller
@@ -207,9 +207,9 @@ Apply the official Kind-specific manifest:
 Shell
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 This deploys:
-•	ingress controller pod(s)
-•	service
-•	RBAC setup
+-	ingress controller pod(s)
+-	service
+-	RBAC setup
  
 ________________________________________
 ## Step 10 — Wait for Ingress Controller to Be Ready
@@ -227,20 +227,26 @@ kubectl wait --namespace ingress-nginx \
 ________________________________________
 ## Step 11 — Deploy a Test App
 Shell
+````text
 kubectl create deployment web --image=nginx
 kubectl expose deployment web --port=80
- 
+```` 
 Verify:
 Shell
+````text
 kubectl get svc web
- 
+```` 
 ________________________________________
 ## Step 12 — Create an Ingress Resource
 Create a file:
 Shell
+
+````text
 nano ingress.yaml
+````
 Paste:
-'''YAML
+
+````yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -257,11 +263,12 @@ spec:
                 name: web
                 port:
                   number: 80
-'''                  
+````                  
 Apply it:
 Shell
+````text
 kubectl apply -f ingress.yaml
- 
+'''' 
 ________________________________________
 ## Step 13 — Update Hosts File (Critical for Local Testing)
 Since web.local isn’t real DNS, map it locally.
