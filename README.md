@@ -45,20 +45,20 @@ nodes:
 ### Worker nodes
 - role: worker
 - role: worker
-This gives you:
-•	1 control-plane node
-•	2 worker nodes
+### This gives you:
+-	1 control-plane node
+-	2 worker nodes
 Total: 3 nodes
 ________________________________________
 ## Step 2 — Create the Cluster
-Run:
+###Run:
 Shell
 kind create cluster --name dev-cluster --config kind-3node.yaml
-This will:
-•	Spin up 3 Docker containers (each acts as a node)
-•	Configure networking
-•	Set your kubeconfig automatically
-Takes about 30–60 seconds.
+###
+-	Spin up 3 Docker containers (each acts as a node)
+-	Configure networking
+-	Set your kubeconfig automatically
+### Takes about 30–60 seconds.
 ________________________________________
 ## Step 3 — Verify the Cluster
 Check nodes:
