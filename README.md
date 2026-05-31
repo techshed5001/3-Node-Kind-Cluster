@@ -43,16 +43,17 @@ Kind creates clusters based on a YAML config. Create a file:
 Shell
 nano kind-3node.yaml
 Paste this:
-YAML
+````YAML
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
-nodes:
-### Control plane node
-- role: control-plane
+  nodes:
+  # Control plane node
+  - role: control-plane
 
-### Worker nodes
+# Worker nodes
 - role: worker
 - role: worker
+````
 ### This gives you:
 -	1 control-plane node
 -	2 worker nodes
@@ -61,7 +62,9 @@ ________________________________________
 ## Step 2 — Create the Cluster
 ###Run:
 Shell
+````text
 kind create cluster --name dev-cluster --config kind-3node.yaml
+````
 ###
 -	Spin up 3 Docker containers (each acts as a node)
 -	Configure networking
@@ -71,8 +74,9 @@ ________________________________________
 ## Step 3 — Verify the Cluster
 Check nodes:
 Shell
+````text
 kubectl get nodes
-
+````
  
 Expected output:
 Plain Text
@@ -83,8 +87,9 @@ dev-cluster-worker2 Ready <none> X v1.xx
 
 Check cluster info:
 Shell
+````text
 kubectl cluster-info
-
+````
  
 
 
@@ -96,19 +101,22 @@ ________________________________________
 Let’s confirm everything works across nodes.
 Create a deployment:
 Shell
+````text
 docker pull nginx
 kubectl create deployment nginx --image=nginx
-
+````
  
  
 Scale it:
 Shell
+````text
 kubectl scale deployment nginx --replicas=5
- 
+```` 
 Check pod distribution:
 Shell
+````text
 kubectl get pods -o wide
-
+````
  
 You should see pods spread across your 2 worker nodes.
 ________________________________________
