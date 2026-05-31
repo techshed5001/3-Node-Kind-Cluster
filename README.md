@@ -1,6 +1,6 @@
 # 3 Node Kind cluster on single laptop
 
-<img src="images/3-node-kind-cluser.jpg" width="600"/>
+<img src="images/3-node-kind-cluster.jpg" width="600"/>
 
 ## Make sure you have:
 
