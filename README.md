@@ -178,7 +178,7 @@ ________________________________________
 Ingress needs access from your host → cluster.
 Update your kind config (or recreate cluster with this):
 
-''''yaml
+````yaml
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
@@ -193,7 +193,7 @@ nodes:
 
   - role: worker
   - role: worker
-''''
+````
 Create the cluster:
 Shell
 kind create cluster --name dev-cluster --config kind-3node.yaml
