@@ -16,19 +16,27 @@
 - Install via:
 ## Mac (Homebrew):
 Shell
+
+````text
 brew install kind
+````
 ## Windows (Chocolatey):
-PowerShell
+PowerShell 
+````text
 choco install kind
+````
 ## Linux:
 Shell
+````text
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
 chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
-
+````
 Verify:
 Shell
+````text
 kind version
+````
 ________________________________________
 ## Step 1 — Define a 3-node Cluster Config
 Kind creates clusters based on a YAML config. Create a file:
