@@ -220,10 +220,13 @@ ingress-nginx-controller-xxxxx   Running
  
 If needed:
 Shell
+
+````text
 kubectl wait --namespace ingress-nginx \
 --for=condition=ready pod \
 --selector=app.kubernetes.io/component=controller \
 --timeout=90s
+````
 ________________________________________
 ## Step 11 — Deploy a Test App
 Shell
