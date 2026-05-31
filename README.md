@@ -287,7 +287,7 @@ Apply it:
 Shell
 ````text
 kubectl apply -f ingress.yaml
-'''' 
+````
 ________________________________________
 ## Step 13 — Update Hosts File (Critical for Local Testing)
 Since web.local isn’t real DNS, map it locally.
