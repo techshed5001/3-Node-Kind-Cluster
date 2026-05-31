@@ -164,15 +164,15 @@ kind load docker-image my-app:latest --name dev-cluster
 ________________________________________
 # Summary
 ## You now have:
-•	Local 3-node Kubernetes cluster
-•	Fully functional scheduler & networking
-•	Realistic multi-node environment for testing
+-	Local 3-node Kubernetes cluster
+-	Fully functional scheduler & networking
+-	Realistic multi-node environment for testing
 ________________________________________
 ## Next steps:
-•	Adding Ingress (NGINX)
-•	Simulating multi-AZ clusters
-•	Running CI pipelines locally
-•	Setting up persistent volumes in Kind
+-	Adding Ingress (NGINX)
+-	Simulating multi-AZ clusters
+-	Running CI pipelines locally
+-	Setting up persistent volumes in Kind
 
 ## Step 8 — Create Kind Cluster with Port Mapping (IMPORTANT)
 Ingress needs access from your host → cluster.
