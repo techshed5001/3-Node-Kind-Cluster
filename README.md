@@ -7,20 +7,20 @@
 ### Docker Desktop installed and running
 •	Enable Kubernetes NOT required (we’ll use Kind)
 •	Allocate at least: 
-o	4 CPUs
-o	6–8 GB RAM
-kubectl installed
-Shell
-kubectl version --client
-kind (Kubernetes IN Docker) installed
-Install via:
-Mac (Homebrew):
+-	4 CPUs
+-	6–8 GB RAM
+### kubectl installed
+- Shell
+- kubectl version --client
+### kind (Kubernetes IN Docker) installed
+- Install via:
+## Mac (Homebrew):
 Shell
 brew install kind
-Windows (Chocolatey):
+## Windows (Chocolatey):
 PowerShell
 choco install kind
-Linux:
+## Linux:
 Shell
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/latest/kind-linux-amd64
 chmod +x ./kind
